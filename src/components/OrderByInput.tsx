@@ -12,6 +12,12 @@ interface IOrderByInputProps extends SelectProps {
   containerProps?: IContainerProps;
 }
 
+export type OrderOptions =
+  | "national_number_asc"
+  | "national_number_desc"
+  | "name_asc"
+  | "name_desc";
+
 export const OrderByInput = ({
   containerProps,
   ...props
@@ -28,11 +34,11 @@ export const OrderByInput = ({
       </Heading>
 
       <Select maxW="200px" {...props}>
-        <option value="national_number:asc">Menor número</option>
-        <option value="national_number:desc">Maior número</option>
+        <option value="national_number_asc">Menor número</option>
+        <option value="national_number_desc">Maior número</option>
 
-        <option value="name:asc">Ordem alfabética</option>
-        <option value="name:desc">Ordem alfabética-invertida</option>
+        <option value="name_asc">Ordem alfabética</option>
+        <option value="name_desc">Ordem alfabética-invertida</option>
       </Select>
     </Flex>
   );
