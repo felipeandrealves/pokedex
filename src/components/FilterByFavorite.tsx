@@ -12,7 +12,7 @@ export const FilterByFavorite = ({
 }: IFilterByFavorite) => {
   return (
     <Flex {...container}>
-      <Switch colorScheme="red" {...props} />
+      <Switch id="favoriteFilter" colorScheme="redScheme" {...props} />
     </Flex>
   );
 };
