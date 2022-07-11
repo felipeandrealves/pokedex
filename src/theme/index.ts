@@ -38,5 +38,17 @@ export const theme = extendTheme({
     psychic: "#E95587",
     electric: "#F8CF32",
     fighting: "#C03228",
+
+    redScheme: {
+      100: "#E2350D",
+      200: "#E2350D",
+      300: "#E2350D",
+      400: "#E2350D",
+      500: "#E2350D",
+      600: "#E2350D",
+      700: "#E2350D",
+      800: "#E2350D",
+      900: "#E2350D",
+    },
   },
 });

@@ -2,7 +2,8 @@ import { Flex } from "@chakra-ui/react";
 import type { NextPage } from "next";
 import Head from "next/head";
 
-import { Header, Pokemons } from "../components";
+import { Pokemons } from "../components/Pokemons";
+import { Header } from "../components/Header";
 
 const Home: NextPage = () => {
   return (
