@@ -18,10 +18,10 @@ export const CheckBoxType = ({ ...props }: CheckboxProps) => {
       alignItems="center"
       justifyContent="center"
       gridColumnGap={2}
-      h="40px"
+      h="30px"
       borderRadius="40px"
       border="1px solid"
-      p="0 1rem"
+      p="0 0.5rem"
       borderColor="red"
       bg={state.isChecked ? "red" : "transparent"}
       cursor="pointer"
@@ -29,15 +29,21 @@ export const CheckBoxType = ({ ...props }: CheckboxProps) => {
       {...htmlProps}
     >
       <input {...getInputProps()} hidden />
-      <Flex {...getCheckboxProps()}>
-        {state.isChecked && (
+
+      {state.isChecked && (
+        <Flex {...getCheckboxProps()}>
           <FontAwesomeIcon
             icon={faCheck}
             style={{ fontSize: "1rem", color: "white" }}
           />
-        )}
-      </Flex>
-      <Text color={props.isChecked ? "white" : "font"} {...getLabelProps()}>
+        </Flex>
+      )}
+
+      <Text
+        fontSize="0.8rem"
+        color={props.isChecked ? "white" : "font"}
+        {...getLabelProps()}
+      >
         {props.value}
       </Text>
     </chakra.label>
