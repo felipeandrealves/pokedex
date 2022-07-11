@@ -21,7 +21,7 @@ export const Header = ({ ...props }: IHeaderProps) => {
         h="100%"
         align="center"
         justify="space-between"
-        padding={["1rem", 0]}
+        padding={["1rem", "2rem"]}
       >
         <Flex align="center">
           <Img alt="Pokeball" src="/pokeball.svg" mr="1rem" />
