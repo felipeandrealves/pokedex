@@ -1,6 +1,10 @@
 import { Stack, Text, useCheckboxGroup } from "@chakra-ui/react";
 import { CheckBoxType } from "./CheckBoxType";
 
+interface IFilterByType {
+  onChange: (types: string[]) => void;
+}
+
 const types = [
   "Bug",
   "Dark",
@@ -22,8 +26,8 @@ const types = [
   "Water",
 ];
 
-export const FilterByType = () => {
-  const { value, getCheckboxProps } = useCheckboxGroup({});
+export const FilterByType = ({ onChange }: IFilterByType) => {
+  const { getCheckboxProps } = useCheckboxGroup({ onChange });
 
   return (
     <>
