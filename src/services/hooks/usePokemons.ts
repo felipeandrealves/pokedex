@@ -17,17 +17,12 @@ export const usePokemons = () => {
   );
 
   const pokemons = useMemo(() => {
-    const dataFetch = data?.results.map((pokemon) => {
-      const { name, sprites, type } = pokemon;
-
-      return {
-        name,
-        sprites,
-        type,
-      };
+    const map = new Map();
+    data?.results.forEach((pokemon) => {
+      map.set(pokemon.national_number, pokemon);
     });
 
-    return dataFetch;
+    return Array.from(map.values());
   }, [data?.results]);
 
   return {
