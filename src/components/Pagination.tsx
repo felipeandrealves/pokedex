@@ -7,7 +7,7 @@ import {
   PaginationContainer,
   PaginationPageGroup,
 } from "@ajna/pagination";
-import { ChakraProvider } from "@chakra-ui/react";
+import { useBreakpointValue } from "@chakra-ui/react";
 
 interface IPaginationParams {
   current: number;
@@ -22,6 +22,8 @@ export const Pagination = ({
   perPage,
   handlePageChange,
 }: IPaginationParams) => {
+  const variant = useBreakpointValue({ base: "60%", md: "100%" });
+
   const { currentPage, setCurrentPage, pagesCount, pages } = usePagination({
     limits: {
       outer: 2,
@@ -43,7 +45,12 @@ export const Pagination = ({
       currentPage={currentPage}
       onPageChange={chakraPageChange}
     >
-      <PaginationContainer w="100%" align="center" justify="space-between">
+      <PaginationContainer
+        style={{ zoom: variant }}
+        w="100%"
+        align="center"
+        justify="space-between"
+      >
         <PaginationPrevious
           bg="light_gray"
           _hover={{ bg: "red", color: "white" }}

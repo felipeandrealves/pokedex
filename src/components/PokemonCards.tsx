@@ -21,7 +21,7 @@ export const PokemonCard = ({
 
   return (
     <Flex
-      w="125px"
+      w="145.6px"
       h="250px"
       direction="column"
       justify="space-between"
@@ -29,6 +29,7 @@ export const PokemonCard = ({
       onMouseEnter={() => setMouseIn(true)}
       onMouseLeave={() => setMouseIn(false)}
       pos="relative"
+      p="0.25rem"
       {...container}
     >
       <Flex pos="absolute" top="0" right="0">

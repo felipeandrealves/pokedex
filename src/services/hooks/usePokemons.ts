@@ -18,6 +18,7 @@ export const usePokemons = () => {
 
   const pokemons = useMemo(() => {
     const map = new Map();
+
     data?.results.forEach((pokemon) => {
       map.set(pokemon.national_number, pokemon);
     });

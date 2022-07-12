@@ -156,8 +156,8 @@ export const Pokemons = () => {
             <Flex
               minH="400px"
               wrap="wrap"
-              align="flex-start"
-              justify="flex-start"
+              align={["center", "flex-start"]}
+              justify={["center", "flex-start"]}
             >
               {isLoading ? (
                 <Flex w="100%" h="100%" align="center" justify="center">
@@ -177,8 +177,6 @@ export const Pokemons = () => {
                         return (
                           <PokemonCard
                             container={{
-                              mr: "0.5rem",
-                              mb: "1rem",
                               onClick: () =>
                                 addNewFavorite(pokemon.national_number),
                             }}
