@@ -24,7 +24,7 @@ export const Pagination = ({
 }: IPaginationParams) => {
   const variant = useBreakpointValue({ base: "60%", md: "100%" });
 
-  const { currentPage, setCurrentPage, pagesCount, pages } = usePagination({
+  const { setCurrentPage, pagesCount, pages } = usePagination({
     limits: {
       outer: 2,
       inner: 2,
@@ -42,7 +42,7 @@ export const Pagination = ({
   return (
     <ChakraPagination
       pagesCount={pagesCount}
-      currentPage={currentPage}
+      currentPage={current}
       onPageChange={chakraPageChange}
     >
       <PaginationContainer
