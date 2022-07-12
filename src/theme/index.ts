@@ -4,6 +4,7 @@ export const theme = extendTheme({
   style: {
     global: {
       "*": {
+        overflowY: "hidden",
         fontFamily: "Titillium Web",
         padding: 0,
         margin: 0,

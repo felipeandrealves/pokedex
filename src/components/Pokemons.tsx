@@ -198,7 +198,7 @@ export const Pokemons = () => {
               <Pagination
                 current={current}
                 perPage={perPage}
-                pokemonsTotal={pokemons.length}
+                pokemonsTotal={orderPokemons.length}
                 handlePageChange={handlePageChange}
               />
             </Flex>

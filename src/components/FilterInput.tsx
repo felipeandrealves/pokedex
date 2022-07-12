@@ -12,7 +12,7 @@ interface IOrderByInputProps extends InputProps {}
 
 export const FilterInput = ({ ...props }: IOrderByInputProps) => {
   return (
-    <InputGroup maxW="500px">
+    <InputGroup maxW="350px">
       <Input
         {...props}
         borderRadius="2rem"
