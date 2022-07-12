@@ -8,6 +8,7 @@ import {
   PaginationPageGroup,
 } from "@ajna/pagination";
 import { useBreakpointValue } from "@chakra-ui/react";
+import { useEffect } from "react";
 
 interface IPaginationParams {
   current: number;
@@ -38,6 +39,10 @@ export const Pagination = ({
 
     setCurrentPage(nextPage);
   };
+
+  useEffect(() => {
+    setCurrentPage(1);
+  }, [pokemonsTotal, setCurrentPage]);
 
   return (
     <ChakraPagination
