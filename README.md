@@ -2,7 +2,7 @@
 
 This is a [Next.js](https://nextjs.org/) and Typescript project.
 
-Check the app running here: https://pokedex-ruby-theta.vercel.app/
+Check the app running here: https://pokedex-ruby-theta.vercel.app
 
 ## How to build the project
 
