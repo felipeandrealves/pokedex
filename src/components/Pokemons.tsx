@@ -121,7 +121,10 @@ export const Pokemons = () => {
           />
 
           <OrderByInput
-            onChange={(e) => setOrderBy(e.target.value)}
+            onChange={(e) => {
+              setOrderBy(e.target.value);
+              setCurrent(1);
+            }}
             containerProps={{ mt: ["1rem", "0"] }}
           />
         </Flex>
@@ -133,14 +136,22 @@ export const Pokemons = () => {
             </Text>
 
             <Flex wrap="wrap">
-              <FilterByType onChange={(types) => setTypesToFilter(types)} />
+              <FilterByType
+                onChange={(types) => {
+                  setTypesToFilter(types);
+                  setCurrent(1);
+                }}
+              />
             </Flex>
 
             <Text fontWeight="bold" mb="0.5rem">
               Filtrar favoritos
             </Text>
             <FilterByFavorite
-              onChange={() => setFavoriteFilter(!favoriteFilter)}
+              onChange={() => {
+                setFavoriteFilter(!favoriteFilter);
+                setCurrent(1);
+              }}
             />
           </Flex>
 
